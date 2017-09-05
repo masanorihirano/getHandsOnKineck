@@ -9,11 +9,11 @@
         Loaded="MainWindow_Loaded"
         Closing="MainWindow_Closing">
     <Grid Margin="0,0,0,0">
-        <Viewbox HorizontalAlignment="left" Margin="0,0,200,0">
+        <Viewbox HorizontalAlignment="left" Margin="0,0,300,0">
             <Image Source="{Binding ImageSource}" Stretch="UniformToFill" />
         </Viewbox>
-        <Viewbox HorizontalAlignment="right" Margin="850,0,0,0">
-            <TextBlock HorizontalAlignment="right" FontSize="20" TextWrapping="Wrap" Text="{Binding DataText}" VerticalAlignment="Top" Width="200" Height="671"/>
+        <Viewbox HorizontalAlignment="right" Margin="750,0,0,0">
+            <TextBlock HorizontalAlignment="right" FontSize="20" TextWrapping="Wrap" Text="{Binding DataText}" VerticalAlignment="Top" Width="300" Height="671"/>
         </Viewbox>
     </Grid>
 </Window>

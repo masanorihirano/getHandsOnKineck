@@ -142,8 +142,15 @@ namespace getHands
                         DrawHand(jointPoints[JointType.HandLeft], dc);
                         DrawHand(jointPoints[JointType.HandRight], dc);
                         tempText += "Body[" + (bodyCount++) + "]\n";
-                        tempText += "  L:(" + jointPoints[JointType.HandLeft].X + "," + jointPoints[JointType.HandLeft].Y + ")\n";
-                        tempText += "  R:(" + jointPoints[JointType.HandRight].X + "," + jointPoints[JointType.HandRight].Y + ")\n";
+                        if (body.IsTracked)
+                        {
+                            tempText += "  L[" + body.HandLeftState + "]:(" + (int)jointPoints[JointType.HandLeft].X + "," + (int)jointPoints[JointType.HandLeft].Y + ")\n";
+                            tempText += "  R[" + body.HandRightState + "]:(" + (int)jointPoints[JointType.HandRight].X + "," + (int)jointPoints[JointType.HandRight].Y + ")\n";
+                        }
+                        else
+                        {
+                            tempText += " Not Tracked\n";
+                        }
                     }
                 }
                 // prevent drawing outside of our render area
